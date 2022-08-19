@@ -1,0 +1,35 @@
+\section{Series representation}
+
+Through the theorems (\ref{awesome})(\ref{nice}) we can create Tailor's series T function
+
+\begin{align}
+      \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+      \bigg| x  \right)&= \sum_{\xi \geq 0} \frac{1}{\xi!} (x-r)^n\frac{1}{
+      \Gamma(n-\xi+1)}\sum_{n \geq 0}\left(r- \hat{\mathbb{D}}\left( \xi_k 
+      \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| 0 \right)\right)^{\xi-n}
+      \mathcal{I}(P_m, \Omega_m, n) \\
+      & = \sum_{\xi \geq 0} \frac{1}{\xi!} (x-r)^n\sum \frac{(-1)^{\beta_1 + \xi}
+      (\beta_1 -1)!}{\prod_{i=2}^\xi (\beta_i)!i!^{\beta_i}} (\prod_{\lambda = 1}^k
+      (\ln(n_\lambda) \mathcal{T}(\bigotimes_{j=1}^\lambda n_j |r) + \\
+      &+\sum_{i=1}^m p_i \prod_{j=1}^m (x-\omega_j)^{p_i-\delta_{i, j}(1)} )\prod_{j=2}^\xi
+      \left(\mathcal{T}(\bigotimes_{m \geq t \geq n}x_t| r) \ln^i (x_m) \right.\\
+      &\left. \biigO_{\lambda = 1}^{m-1} \left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}
+      \ln^{u_{\lambda}}(x_{m-\lambda}) \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda x_{m-q}
+      |x)^{u_{\lambda}} \right] + \right.\\
+      &\left.+ i! \sum_{\sum_{j=1}^m k_j = i}\prod_{1 \leq t \leq m} \frac{(x - \omega_t)^{p_k v}
+      \Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}\right)^{\beta_i}
+      \label{q}
+\end{align}
+
+\subsection{nth integration of Thick function}
+
+To determine the nth integration of the Thick function, we use 
+its series representation.
+
+\begin{align}
+      J_\xi\left( \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} 
+      \bigg| x  \right)\right)&= \sum_{k \geq 0} \frac{1}{k!} \frac{n!(x-r)^{n+\xi}}{(n+\xi)!}
+      \frac{1}{(n-k)!}\sum_{n \geq 0}\left(r- \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\
+      \Omega_m \end{matrix} \bigg| 0 \right)\right)^{\xi-n} \mathcal{I}(P_m, \Omega_m, n)
+\end{align}
+
