@@ -1,0 +1,630 @@
+\section{Properties}
+
+\begin{definition}
+        Let us have function
+        \begin{align}
+                \mathcal{T}(\xi_k |x) + \frac{(x-t_1)(x-t_2)...(x-t_n)}{(x-s_1)(x-s_2)
+                ...(x-s_m)} \equiv \mathbb{D}\left( \xi_k \begin{matrix} \iota_n \\ 
+                \zeta_m \end{matrix} \bigg| x \right)=w
+        \end{align}
+        
+        where \(\bigotimes_{u=1}^n t_u = \iota_n; \bigotimes_{r=1}^m s_r = \zeta_m\)
+        then its inversion can be written in the form
+        
+        \begin{align}
+                x = \mathbb{T}\left( \xi_k \begin{matrix} \iota_n \\ 
+                \zeta_m \end{matrix} \bigg| w \right)
+        \end{align}
+\end{definition}
+
+\begin{theorem}[identities of Thick function]
+        Thick function have following identities \cite{32}
+        \begin{align}
+                \mathbb{T}\left( \xi_k \begin{matrix} - \\ - \end{matrix} \bigg| w \right) &= \mathcal{D}(\xi_k | x) \, & \
+                \mathbb{T}\left( \xi_k \begin{matrix} 2x \\ - \end{matrix} \bigg| 0 \right) &= \tau(\xi_k)\\
+                \mathbb{T}\left( 0 \begin{matrix} x-xe^x\\ - \end{matrix} \bigg| x \right) &= W(x)\, & \
+                \mathbb{T}\left( \xi_k \begin{matrix} k \\ x+1 \end{matrix} \bigg| 0 \right) &= \mathbb{T}\left( 
+                \xi_k \begin{matrix} 2x \\ - \end{matrix} \bigg| k \right) \\
+                \mathbb{T}\left( e \begin{matrix} - \\ - \end{matrix} \bigg| x \right) &= \ln(x) \, &
+                \mathbb{T}\left( 0 \begin{matrix} \iota_n, x-e^x \\ \zeta_m \end{matrix} \bigg| x \right) &=
+                W\left( \begin{matrix} \iota_n \\ \zeta_m \end{matrix} \bigg; x \right) \, 
+        \end{align}
+        where \(W\left( \begin{matrix} \iota_n \\ \zeta_m \end{matrix} \bigg; a \right) \) 
+        is generalized Lambert W function \cite{32}.
+\end{theorem}
+
+\begin{theorem}[Identities of D-function]
+        D-function have following identities
+        \begin{align}
+                \mathbb{D}\left( \xi_k \begin{matrix} - \\ - \end{matrix} \bigg| x 
+                \right) &= \mathcal{T}(\xi_k | x) \, & \
+                \mathbb{D}\left( e \begin{matrix} - \\ - 
+                \end{matrix} \bigg| x \right) &= \exp(x)
+        \end{align}
+\end{theorem}
+
+\begin{theorem}
+        Taylor series of \(\mathbb{T}\left(0 \begin{matrix} t_1, t_2, a-e^a \\ -
+        \end{matrix} \bigg| a \right)\) around \(a = 0\) is
+
+        \begin{align}
+                \mathbb{T}\left(0 \begin{matrix} t_1, t_2, a-e^a \\ - \end{matrix} \bigg| a  
+                \right) = t_1 - \sum_{n \geq 1} \frac{1}{n!n} \left( \frac{ane^{-t_1}}{t_2 -
+                t_1} \right)^n B_{n-1}\left( \frac{-2}{n(t_2 - t_1)}\right)
+        \end{align}
+
+        where \(B_n(z)\) is Bessel polynomial \cite{33}
+
+        \begin{align}
+                B_n(z) = \sum_{k=0}^n \frac{(n+k)!}{k!(n-k)!}
+                \left( \frac{z}{2} \right)^k
+        \end{align}
+\end{theorem}
+
+\begin{theorem}
+        The Taylor series of \(\mathbb{T}\left( 0 \begin{matrix} t, a-e^a 
+        \\ s \end{matrix} \bigg| a\right)\) around a = 0 is
+        
+        \begin{align}
+                \mathbb{T}\left( 0 \begin{matrix} t, a-e^a \\ s \end{matrix} 
+                \bigg| a \right) = t-T \sum_{n=1}^\infty \frac{L^{'}_n(n T)}{n}e^{-nt}a^n
+        \end{align}
+        
+        where \(T = t - s \neq 0\), and \(L^{'}_n\) is derivate 
+        of the nth Laguerre polynomial. \cite{32}
+\end{theorem}
+
+\subsection{Bürmann-Lagrange series}
+
+A power series which offers a complete solution to the problem of local inversion 
+of holomorphic functions. In fact, let a function \(w=g(z)\) of the complex variable
+z be regular in a neighbourhood of the point \(z=a\), and let \(g(a)=b\) and 
+\(g^′(a)\neq0\). Then there exists a regular function \(z=h(w)\) in some 
+neighbourhood of the point w=b of the w- plane which is the inverse to \(g(z)\)
+and is such that \(h(b)=a\). Moreover, if \(f(z)\) is any regular function in a 
+neighbourhood of the point z=a, then the composite function \(F(w)=f[h(w)]\) can 
+be expanded in a Bürmann–Lagrange series in a neighbourhood of the point \(w=b\)
+
+\begin{align}
+        F(w) &= f(a) + \\
+        &+\sum_{n\geq1} \frac{1}{n!} \{\frac{d^{n-1}}{dz^{n-1}}\left[ f^{′}(z) 
+        \left( \frac{z-a}{g(z) - b}\right)^n\right]\}_{z=a} (w-b)^n.
+\label{huhu}
+\end{align}
+
+The inverse of the function \(w=g(z)\) is obtained by setting \(f(z)\equiv z\).
+\subsection{Aplication of Lagrange inversion formula}
+We first redefine the Thick function to an equivalent more functional form. 
+
+\begin{definition}[B-Thick function]
+        Let  \(\hat{\mathbb{T}}\) be a B-Thick function that is defined by the relation
+        
+        \begin{align}
+        \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} 
+        \bigg| \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+        \bigg| x \right)  \right) =x
+        \end{align}
+        
+        where
+        
+        \begin{align}
+        P_m = \bigotimes_{i=1}^m p_i,  \ & \ \Omega_m = \bigotimes_{i=1}^m \omega_i, \
+        & \ \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} 
+        \bigg| x \right) = \mathcal{T}(\xi_k | x) + \prod_{i=1}^m (x - \omega_i)^{p_i}
+        \end{align}
+\end{definition}
+
+Then using (\ref{huhu}), we can get the following theorem for B-Thick function
+
+\begin{conjecture}
+        The following relationship is Bürmann-Lagrange series of B-thick function around neighbourhood a = 0.
+        
+        \begin{align}
+                \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+                \bigg| x \right) &= \sum_{n \geq 1} \left( x - \hat{\mathbb{D}}\left( 
+                \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| 0 \right)\right)^n
+                \lim_{\omega \to 0} \left\{\omega\left(\hat{\mathbb{D}}\left( \xi_k 
+                \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| \omega \right) - 
+                \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+                \bigg| 0 \right)\right)\right\} \\ & = \sum_{n \geq 1} \left( x - 
+                \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} 
+                \bigg| 0 \right)\right)^n \mathcal{L}(P_m, \Omega_m)
+        \end{align}
+\end{conjecture}
+
+Our goal will therefore be to find the value of this limit
+
+\begin{align}
+        \mathcal{L}(P_m, \Omega_m) &\equiv \lim_{\omega \to 0} \left\{\omega\left(
+        \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} 
+        \bigg| \omega \right) - \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ 
+        \Omega_m \end{matrix} \bigg| 0 \right)\right)\right\} \\
+        & = \lim_{\omega \to 0} \left\{\omega\left(\mathcal{T}(\xi_k | \omega) + 
+        \prod_{i=1}^m (\omega - \omega_i)^{p_i}  - \mathcal{T}(\xi_k | 0) - \prod_{i=1}^m
+        ( - \omega_i)^{p_i}\right)\right\}\\ &=  \lim_{\omega \to 0} \left\{\omega
+        \mathcal{T}(\xi_k | \omega) + \omega\prod_{i=1}^m (\omega - \omega_i)^{p_i} 
+        - \omega\mathcal{T}(\xi_k | 0) - \omega\prod_{i=1}^m ( - \omega_i)^{p_i}\right\} \\
+        & = \lim_{\omega \to 0}\left\{\omega\mathcal{T}(\xi_k | \omega)\right\} + 
+        \lim_{\omega \to 0}\left\{\omega\prod_{i=1}^m (\omega - \omega_i)^{p_i} \right\} 
+        - \lim_{\omega \to 0}\left\{\omega\mathcal{T}(\xi_k | 0)\right\} - \lim_{\omega 
+        \to 0}\left\{\omega\prod_{i=1}^m ( - \omega_i)^{p_i}\right\} \\
+        & =   \lim_{\omega \to 0}\left\{\omega\prod_{i=1}^m (\omega - \omega_i)^{p_i} \right\}
+        - \lim_{\omega \to 0}\left\{\omega\prod_{i=1}^m ( - \omega_i)^{p_i}\right\} \\
+        & = \lim_{\omega \to 0}\left\{\omega\prod_{i=1}^m (\omega - \omega_i)^{p_i} \right\} \\
+        &= 0
+\end{align}
+
+his leads to a contradiction so the above hypothesis is not true and we 
+must choose a completely different tactic.
+
+\begin{conjecture}
+        The following relationship is Bürmann-Lagrange series of 
+        B-thick function around neighbourhood a = 0.
+        \begin{align}
+                \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m 
+                \\ \Omega_m \end{matrix} \bigg| x \right) 
+                = \sum_{n \geq 1} \left( x - \hat{\mathbb{D}}
+                \left( \xi_k \begin{matrix} P_m \\ \Omega_m 
+                \end{matrix} \bigg| 0 \right)\right)^n 
+                \mathcal{I}(P_m, \Omega_m, n)
+        \end{align}
+        
+        where 
+        
+        \begin{align}
+                \mathcal{I}(P_m, \Omega_m, n) = \lim_{\omega \to 0}
+                \frac{d^{n-1}}{d\omega^{n-1}} \omega^n \left(\hat{
+                \mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m
+                \end{matrix} \bigg| \omega \right) - \hat{\mathbb{D}}
+                \left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+                \bigg| 0 \right)\right)^{-n}
+        \end{align}
+\end{conjecture}
+
+\begin{align}
+        \mathcal{I}(P_m, \Omega_m, n) &\equiv \lim_{\omega \to 0} 
+        \frac{d^{n-1}}{d\omega^{n-1}} \omega^n \left(\hat{\mathbb{D}}
+        \left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg|
+        \omega \right) - \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m
+        \\ \Omega_m \end{matrix} \bigg| 0 \right)\right)^{-n} \\
+        & = \lim_{\omega \to 0} \sum^{n-1}_{h=0} \binom{n-1}{h} 
+        \frac{\omega^{h+1}\Gamma(1+n)}{\Gamma(h+2)} \left[\left(\hat{
+        \mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+        \bigg| \omega \right) - \hat{\mathbb{D}}\left( \xi_k \begin{matrix} 
+        P_m \\ \Omega_m \end{matrix} \bigg| 0 \right)\right)^{-n} \right]^{(h)}
+\end{align}
+
+If we use substitution 
+
+\begin{align}
+\mathcal{F} &= \left(\hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\
+\Omega_m \end{matrix} \bigg| \omega \right) - \hat{\mathbb{D}}\left( 
+\xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| 0 \right)\right)^{-n} \\
+&= \sum_{u=0}^\infty (-1)^u \binom{n + u - 1}{u} \hat{\mathbb{D}}\left( \xi_k
+\begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| \omega \right)^u  
+\hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+\bigg| 0 \right)^{-n-u}
+\end{align}
+
+then
+
+\begin{align}
+\mathcal{F}^{(h)} = \sum_{u=0}^\infty (-1)^u \binom{n + u - 1}{u}  
+\hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+\bigg| 0 \right)^{-n-u} \left( \hat{\mathbb{D}}\left( \xi_k \begin{matrix}
+P_m \\ \Omega_m \end{matrix} \bigg| \omega \right)^u\right)^{(h)}
+\end{align}
+
+We apply the substitution again
+
+\begin{align}
+        \mathcal{R}^{(h)} &=  \left( \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m 
+        \\ \Omega_m \end{matrix} \bigg| \omega \right)^u\right)^{(h)} \\
+        &= \left[\left(\mathcal{T}(\xi_k | \omega) + \prod_{i=1}^m (\omega - 
+        \omega_i)^{p_i}\right)^u\right]^{(h)} \\
+        &= \sum_{v=0}^u \binom{u}{v} \left[\mathcal{T}(\xi_k | \omega)^{u-v}
+        \prod_{i=1}^m (\omega - \omega_i)^{p_i}^{v}\right]^{(h)} \\
+        &= \sum_{v=0}^u \binom{u}{v} \sum_{g=0}^h \binom{h}{g} \left(\mathcal{T}
+        (\xi_k | \omega)^{u-v} \right)^{(u-g)} \left(\prod_{i=1}^m (\omega -
+        \omega_i)^{p_i}^{v} \right)^{(g)} \\
+        &= \sum_{v=0}^u \binom{u}{v} \sum_{g=0}^h \binom{h}{g}  
+        \left(\prod_{i=1}^m (\omega - \omega_i)^{p_i}^{v} \right)^{(g)} 
+        \left(\mathcal{T}(\xi_k \cup \{ (u-g) \beta \in \beta\} | \omega) \right)^{(u-g)} 
+\end{align}
+
+then \(\xi_k \cup (u-g)\beta \in \beta := \rho_k\)
+
+\begin{align}
+        \mathcal{R}^{(h)}  &= \sum_{v=0}^u \binom{u}{v} \sum_{g=0}^h \binom{h}{g}
+        \left(\prod_{i=1}^m (\omega - \omega_i)^{p_i}^{v} \right)^{(g)} 
+        \left(\mathcal{T}(\rho_k | \omega) \right)^{(u-g)} \\
+\end{align}
+
+then
+
+\begin{align}
+        \mathcal{E}(g, v, \omega, \Omega_m, P_m) &= \left(\prod_{i=1}^m(\omega
+        - \omega_i)^{p_i}^{v} \right)^{(g)} \\
+        \mathcal{A}(u-g, \omega, \rho_k) &= \left(\mathcal{T}(\rho_k | \omega) 
+        \right)^{(u-g)} \\
+\end{align}
+
+then we realise that \(\mathcal{E}(g, v, \omega, \Omega_m, P_m)\) 
+is a polynomial, so we use a substitution.
+
+\begin{align}
+        \mathcal{E}(g, v, \omega, \Omega_m, P_m) &= \left(\prod_{i=1}^m(\omega 
+        - \omega_i)^{p_i}^{v} \right)^{(g)} \equiv  \left(\sum_{\psi=1}^\phi 
+        \varphi_\psi \omega^\psi \right)^{(g)} \\ & = \sum_{\psi = 1}^\phi 
+        \varphi_\psi \frac{\omega^{\psi - g}\Gamma(1+\psi)}{\Gamma(1 + \psi + g)} \\
+        &= \sum_{\sum_{j=1}^m k_j = g} \binom{g}{k_1, k_2, ..., k_m} \prod_{1 
+        \leq t \leq m} \frac{d^{k_t}}{dx^{k_t}} \left[ \omega - \omega_t )^{p_T 
+        v}\right] \\
+        &=  \sum_{\sum_{j=1}^m k_j = g} \binom{g}{k_1, k_2, ..., k_m} \prod_{1
+        \leq t \leq m} (\omega - \omega_t)^{p_t v - k_t} (1+p_t v - k_t)_{k_t} \\
+        &= g! \sum_{\sum_{j=1}^m k_j = g}\prod_{1 \leq t \leq m} \frac{(\omega 
+        - \omega_t)^{p_k v}\Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}
+\end{align}
+
+so in the end we get the relationship
+
+\begin{conjecture}
+        \label{mm}
+        The following relationship is Bürmann-Lagrange series of B-thick 
+        function around neighbourhood a = 0.
+        
+        \begin{align}
+                \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m \\ 
+                \Omega_m \end{matrix} \bigg| x \right) 
+                = \sum_{n \geq 1} \left( x - \hat{\mathbb{D}}\left(
+                \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} 
+                \bigg| 0 \right)\right)^n \mathcal{I}(P_m, \Omega_m, n)
+        \end{align}
+        
+        where 
+        
+        \begin{align}
+                \mathcal{I}(P_m, \Omega_m, n) =  \lim_{\omega \to 0}
+                \sum^{n-1}_{h=0} \binom{n-1}{h} \frac{\omega^{h+1}
+                \Gamma(1+n)}{\Gamma(h+2)}  \sum_{u=0}^\infty (-1)^u 
+                \binom{n + u - 1}{u}  \hat{\mathbb{D}}\left( \xi_k 
+                \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| 
+                0 \right)^{-n-u}  \mathcal{R}^{(h)}
+        \end{align}
+        
+        and
+        
+        \begin{align}
+                \mathcal{R}^{(h)}= \sum_{v=0}^u \binom{u}{v} \sum_{g=0}^h \binom{h}{g} 
+                \left(\mathcal{T}(\rho_k | \omega) \right)^{(u-g)} n! \sum_{\sum_{j=1}^m 
+                k_j = n}\prod_{1 \leq t \leq m} \frac{(\omega - \omega_t)^{p_k v}
+                \Gamma(1+p_t v)}{\Gamma(1+p_t v - k_t)} 
+\end{conjecture}
+
+\subsubsection{nth derivation of the \(\mathcal{T}\)-function }
+
+to complete the final formula for the limit (\ref{nn}), we are forced 
+to find a general formula for the nth derivative of the \(\mathcal{T}\)-function
+
+\begin{align}
+        \frac{d^\xi}{dx^\xi}(\mathcal{T}(a,| x) ) &=a^x \ln^\xi(a)\\
+        \frac{d^\xi}{dx^\xi}(\mathcal{T}(a, b | x) ) &= T(a, b |x) 
+        \ln^\xi(b) \sum_{w=1}^\xi \ln^w(a) b^{wx} S_2(w, \xi) \\
+        \frac{d^\xi}{dx^\xi}(\mathcal{T}(a, b, c | x) ) &= \mathcal{T}
+        (a, b, c | x) \ln^\xi(c) \left[ \sum_{i=1}^\xi S_2(i, \xi) 
+        \ln^i(b)c^{ix} \sum_{j=1}^i \ln^j(a) b^{jc^x}\right]
+\end{align}
+
+where \(S_2(w, \xi)\) are second order Stirling numbers. Then through
+empirical observation, we establish the following hypothesis
+
+\begin{theorem}
+        \begin{align}
+                \frac{d^\xi}{dx^\xi}(\mathcal{T}(\bigotimes_{m \geq 
+                t \geq n}x_t | x) ) &= \mathcal{T}(\bigotimes_{m \geq 
+                t \geq n}x_t| x) \ln^\xi (x_m) \left[\sum_{u_1 = 1}^\xi
+                S_2(u_1, \xi) \ln^{u_1}(x_{m-1}) \mathcal{T}(x_{m}| u_1 
+                x) \times \right. \\ & \left. \times \sum_{u_2 = 1}^{u_1}
+                \ln^{u_2}(x_{m-2}) \mathcal{T}(x_{m-1} u_2, x_m |x) 
+                \sum_{u_3}^{u_2}...\right. \\ & ... \left. \sum_{u_{m-1}
+                =1}^{u_{m-2}}\ln^{u_{m-1}}(x_1)\mathcal{T}(\bigotimes_{q
+                =2}^m (x_q + \delta_{m, q}(-x_q + x_q u_{m-1})) |x)\right]
+        \end{align}
+
+        by means of noncommutative multiplication, which we denote by 
+        \(o\), we can reformulate the above relation with \(u_0 = \xi\)
+        
+        \begin{align}
+                \frac{d^\xi}{dx^\xi}(\mathcal{T}(\bigotimes_{m \geq 
+                t \geq n}x_t | x) ) &= \mathcal{T}(\bigotimes_{m \geq 
+                t \geq n}x_t| x) \ln^\xi (x_m) \biigO_{\lambda = 1}^{m-1}
+                R\left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}\ln^{u_{\lambda}}
+                (x_{m-\lambda}) \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda 
+                x_{m-q} |x)^{u_{\lambda}} \right]
+                \label{w}
+        \end{align}
+        
+        \begin{align}
+                R=\left[ \lceil \tanh^2(\lambda -1)\rceil+S_{\lambda, 1}(S_2((u_1, \xi))\right]
+        \end{align}
+\end{theorem}
+
+\begin{align}
+        \mathcal{T}\left(\bigotimes_{n=1}^ka_n | x\right) = \sum_{n=0}^\infty 
+        \frac{1}{n!}\left(\biigO_{l=1}^{k-1}\ln(a_l)\left[\sum_{n_l\geq0}
+        \frac{1}{n_l!}\left(\lambda_l\right)^{n_l}\right]^{\Lambda(l, k,
+        \ln(a_k)x}\right)^n
+\end{align}
+
+where \(\Lambda(l, k, \ln(a_k)x) :=\left[\lceil tanh^2(l-k+1)\rceil+
+\delta_{l, k-1}(\ln(a_k)x)\right]\), this function is equal to \(\ln(a_k)x\)
+iff \(l=k-1\), in other cases, its 0. Then higher derivation of this function is
+
+\begin{align}
+        \frac{d^\xi\mathcal{T}}{dx^\xi}\left(\bigotimes_{n=1}^ka_n | x\right) 
+        = \sum_{n\geq0}\frac{1}{n!}\ln^n(a_1) \frac{d^\xi}{dx^\xi}\left(\sum_{n_1
+        \geq0}\frac{1}{n_1!}g(x)\right)
+\end{align}
+
+We use the Multinomial formula for
+
+\begin{align}
+    \frac{d^\xi}{dx^\xi}\left(\sum_{n_1\geq0}\frac{1}{n_1!}g(x)\right) &=  
+    \frac{d^\xi}{dx^\xi} \sum_{n_1\geq0} \left(\sum_{\substack{0\leq r_1 \leq
+    ...\leqr_n\leq n_1 \\ r_1 +...+r_n = n_1}}\prod_{i=1}^n \frac{1}{r_i}\right)
+    g^{n_1}(x) \\
+    &=\sum_{n_1\geq0} \left(\sum_{\substack{0\leq r_1 \leq...\leqr_n\leq n_1 \\
+    r_1 +...+r_n = n_1}}\prod_{i=1}^n \frac{1}{r_i}\right)\frac{d^\xi}{dx^\xi}g^{n_1}(x)
+\end{align}
+
+There is set \(S=\{r_1, ..., r_n\}\) of many distinct elements with \(m \leq n\),
+call these distinct elements \(s_1, ..., s_m\). And define \(N(s_i) = \# \mbox{of}
+\ s_i \ \mbox{appears in} \ (r_1, ..., r_n) \), then we see that the number of time 
+\(a_{r_1}...a_{r_n}\) is is counted is equal to 
+
+\begin{align}
+        \frac{n!}{N(s_1)!...N(s_m)!}
+\end{align}
+
+thus we have
+
+\begin{align}
+        \sum_{n_1\geq0} \left(\sum_{\substack{0\leq r_1 \leq...\leqr_n\leq n_1
+        \\ r_1 +...+r_n = n_1}}\frac{n!}{N(s_1)!...N(s_m)!}\prod_{i=1}^n
+        \frac{1}{r_i}\right)\frac{d^\xi}{dx^\xi}g^{n_1}(x)
+\end{align}
+
+hence
+
+\begin{align}
+        \frac{d^\xi}{dx^\xi}\left(\sum_{n_1\geq0}\frac{1}{n_1!}g(x)\right) 
+        &=\sum_{n\geq0}\frac{1}{n!}\ln^n(a_1) \frac{d^\xi}{dx^\xi}\left(\sum_{n_1
+        \geq0}\frac{1}{n_1!}g(x)\right) \\
+        &=\sum_{n\geq 0}\frac{1}{n!}\ln^n(a_1)\sum_{n_1\geq0}
+        \left(\sum_{\substack{0\leq r_1 \leq...\leqr_n\leq n_1 
+        \\ r_1 +...+r_n = n_1}}\prod_{i=1}^n \frac{1}{r_i}\right)
+        \frac{d^\xi}{dx^\xi}g^{n_1}(x) \\
+        & =\sum_{n_0\geq 0}\frac{1}{n_0!}\biigO_{l=1}^{k-1}
+        \ln^{n_{l-1}}(a_l)
+        \sum_{n_l\geq0} \left(\sum_{\substack{0\leq r_1 \leq...\leqr_n\leq
+        n_l \\ r_1 +...+r_n = n_l}}\frac{n_{l-1}!}{N(s_1)!...N(s_m)!}
+        \prod_{i=1}^{n_{l-1}} \frac{1}{r_i}\right)(\lambda_l)^{n_l \Lambda(l,
+        k,\frac{\ln(a_k)x^{-\xi+n_{l-1}}}{((1-\xi + n_{l-1})_\xi)^{-1}}}
+\end{align}
+
+then we use equation \ref{w}, so we get
+
+\begin{align}
+        \mathcal{T}(\bigotimes_{k \geq t \geq 1}a_t| x) \ln^\xi (a_k)
+        \biigO_{\lambda = 1}^{m-1} R\left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}
+        \ln^{u_{\lambda}}(a_{k-\lambda}) \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda
+        a_{k-q} |x)^{u_{\lambda}} \right] = \\=\sum_{n_0\geq 0}\frac{1}{n_0!}\biigO_{l=1}^{k-1}
+         \ln^{n_{l-1}}(a_l)
+        \sum_{n_l\geq0} \left(\sum_{\substack{0\leq r_1 \leq...\leqr_n\leq n_l 
+        \\ r_1 +...+r_n = n_l}}\frac{n_{l-1}!}{N(s_1)!...N(s_m)!}\prod_{i=1}^{n_{l-1}}
+        \frac{1}{r_i}\right)(\lambda_l)^{n_l \Lambda(l, k,\frac{\ln(a_k)x^{-\xi+n_{l-1}}}{((1-\xi 
+        + n_{l-1})_\xi)^{-1}}}
+\end{align}
+
+we solve this equation for \( \mathcal{T}(\bigotimes_{k \geq t \geq 1}a_t| x)\)
+
+\begin{align}
+        \mathcal{T}(\bigotimes_{k \geq t \geq 1}a_t| x) &=\left(\ln^\xi (a_k)
+        \biigO_{\lambda = 1}^{m-1} \left[ \lceil \tanh^2(\lambda -1)\rceil+\delta_{\lambda,
+        1}(S_2((u_1, \xi))\right]\left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}\ln^{u_{\lambda}}
+        (a_{k-\lambda}) \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda a_{k-q} |x)^{u_{\lambda}}
+        \right]\right)^{-1}\times \\ &\times \sum_{n_0\geq 0}\frac{1}{n_0!}\biigO_{l=1}^{k-1}
+        \ln^{n_{l-1}}(a_l) \sum_{n_l\geq0} \left(\sum_{\substack{0\leq r_1 \leq...\leq r_n\leq n_l
+        \\ r_1 +...+r_n = n_l}}\frac{n_{l-1}!}{N(s_1)!...N(s_m)!}\prod_{i=1}^{n_{l-1}} \frac{1}{r_i}
+        \right)(\lambda_l)^{n_l \Lambda(l, k,\frac{\ln(a_k)x^{-\xi+n_{l-1}}}{((1-\xi + n_{l-1})_\xi)^{-1}}}
+\end{align}
+
+\subsection{nth derivation of The  Thick function}
+
+We determine the nth derivative of the T-function by knowing the nth derivative of the D-function.
+we insert this formula into Langrange's inversion theorem and create a summative representation of
+our goal. Subsequently, our goal will be to find the radius of convergence of the found expression.
+
+\subsubsection{nth derivation of the \(\hat{\mathbb{D}}\)-function}
+
+\begin{align}
+        \left[\hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m 
+        \end{matrix} \bigg| x  \right)\right]^{(\xi)} &= \frac{d^\xi}{dx^\xi}
+        (\mathcal{T}(\bigotimes_{m \geq t \geq n}x_t | x) ) + \frac{d^\xi}{dx^\xi}
+        \left(\prod_{i=1}^m(x - \omega_i)^{p_i}^{v}  \right)\\
+        & = \mathcal{T}(\bigotimes_{m \geq t \geq 1}x_t| x) \ln^\xi (x_m)
+        \biigO_{\lambda = 1}^{m-1} \left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}
+        \ln^{u_{\lambda}}(x_{m-\lambda}) \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda
+        x_{m-q} |x)^{u_{\lambda}} \right] + \\
+        & + \xi! \sum_{\sum_{j=1}^m k_j = \xi}\prod_{1 \leq t \leq m} \frac{(x 
+        - \omega_t)^{p_k v}\Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}
+        \label{e}
+\end{align}
+
+then 
+
+\begin{align}
+        \hat{\mathbb{T}}^{(\xi)}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+        \bigg| x  \right) = \sum \frac{(-1)^{\beta_1 + \xi}(\beta_1 -1)!}{\prod_{i=2}^\xi
+        (\beta_i)!i!^{\beta_i}} \hat{\mathbb{D}}^{(1)}\left( \xi_k \begin{matrix} P_m \\
+        \Omega_m \end{matrix} \bigg| x  \right) \prod_{j=2}^\xi \left(\hat{\mathbb{D}}^{(i)}
+        \left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| x  \right)^{\beta_i}\right)
+\end{align}
+
+where
+
+\begin{align}
+        \beta_1 \leq 2n-1,  \beta_i \geq 0,  \sum_{i=2}^n \beta_i = \beta_1 - n,
+        \sum_{i=2}^n i \beta_i = \beta_1 - 1
+\end{align}
+
+Hence
+
+\begin{align}
+        \hat{\mathbb{T}}^{(\xi)}\left( \xi_k \begin{matrix} P_m \\ \Omega_m 
+        \end{matrix} \bigg| x  \right) &= \sum \frac{(-1)^{\beta_1 + \xi}(\beta_1 
+        -1)!}{\prod_{i=2}^\xi (\beta_i)!i!^{\beta_i}} (\prod_{\lambda = 1}^k
+        (\ln(n_\lambda) \mathcal{T}(\bigotimes_{j=1}^\lambda n_j |x) + \\
+        &+\sum_{i=1}^m p_i \prod_{j=1}^m (x-\omega_j)^{p_i-\delta_{i, j}(1)} 
+        )\prod_{j=2}^\xi \left(\hat{\mathbb{D}}^{(i)}\left( \xi_k \begin{matrix}
+        P_m \\ \Omega_m \end{matrix} \bigg| x  \right)^{\beta_i}\right)\\
+        &= \sum \frac{(-1)^{\beta_1 + \xi}(\beta_1 -1)!}{\prod_{i=2}^\xi 
+        (\beta_i)!i!^{\beta_i}} (\prod_{\lambda = 1}^k (\ln(n_\lambda) 
+        \mathcal{T}(\bigotimes_{j=1}^\lambda n_j |x) + \\
+        &+\sum_{i=1}^m p_i \prod_{j=1}^m (x-\omega_j)^{p_i-\delta_{i, j}(1)} 
+        )\prod_{j=2}^\xi \left(\mathcal{T}(\bigotimes_{m \geq t \geq 1}x_t| 
+        x) \ln^i (x_m) \right.\\
+        &\left. \biigO_{\lambda = 1}^{m-1} \left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}
+        \ln^{u_{\lambda}}(x_{m-\lambda}) \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda x_{m-q}
+        |x)^{u_{\lambda}} \right] + \right.\\
+        &\left.+ i! \sum_{\sum_{j=1}^m k_j = i}\prod_{1 \leq t \leq m} \frac{(x -
+        \omega_t)^{p_k v}\Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}\right)^{\beta_i}
+        \label{awesome}
+\end{align}
+
+the shape of this expansion can also be determined from the conjecture \ref{mm}, when
+
+\begin{align}
+        \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m 
+        \end{matrix} \bigg| x \right) 
+        = \sum_{n \geq 1} \left( x - \hat{\mathbb{D}}\left( \xi_k
+        
+        \begin{matrix} 
+                P_m \\ \Omega_m 
+        \end{matrix} 
+        
+        \bigg| 0 \right)\right)^n 
+        \mathcal{I}(P_m, \Omega_m, n)
+\end{align}
+
+so 
+
+\begin{align}
+        \hat{\mathbb{T}}^{(\xi)}\left( \xi_k \begin{matrix} P_m \\ 
+        \Omega_m \end{matrix} \bigg| x  \right) &= \sum_{n \geq 1} \left[\left( 
+        x - \hat{\mathbb{D}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+        \bigg| 0 \right)\right)^n\right]^{(\xi)} \mathcal{I}(P_m, \Omega_m, n) \\
+        &= \frac{1}{\Gamma(n-\xi+1)}\sum_{n \geq 0}\left(x- \hat{\mathbb{D}}\left( 
+        \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| 0 \right)\right)^{\xi-k}
+        \mathcal{I}(P_m, \Omega_m, n)
+        \label{nice}
+\end{align}
+
+\begin{question}
+        What is Convergence radius of (\ref{awesome}) and (\ref{nice}).
+\end{question}
+
+We can create another formulae for \(\hat{\mathbb{T}}\)-function
+
+\begin{theorem}
+        Let n be a positive integer. If x and y are \(C^n\)-functions 
+        of t and \(\frac{dx}{dt}\neq 0\) in a certain interval, then
+        
+        \begin{align}
+                \frac{d^n y}{dx^n} = \frac{(-1)^{n-1}}{(\frac{dx}{dt})^{2n-1}}
+                \sum_{k=1}^n \frac{\frac{d^ky}{dt^k}}{(k-1)!}\sum_{\substack{s_1
+                + s_2 . ... = n-1 \\ 1\times s_1 + 2 \times s_2 + ... = 2n-k-1}}
+                (-1)^{s_1}(2n-s_1-2)! \prod_{r=1}\frac{(\frac{dx}{dt})^{s_r}}{(r!)^{s_r}s_r!}
+        \end{align}
+        
+        is valid in the interval. \cite{34}
+        
+\end{theorem}
+
+\begin{align}
+        \hat{\mathbb{T}}^{(\xi)}\left( \xi_k \begin{matrix} P_m \\ \Omega_m 
+        \end{matrix} \bigg| x  \right) &= (-1)^{n-1}\left(\left(\frac{d\hat{
+        \mathbb{T}}^{(\xi)}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+        \bigg| t  \right)}{dt}\right)^{2n-1}\right)^{-1}\sum_{k=1}^n \frac{\frac{d^k
+        \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg|
+        t  \right)}{dt^k}}{(k-1)!} \\
+        &\sum_{\substack{s_1 + s_2 . ... = n-1 \\ 1\times s_1 + 2 \times s_2 + ... = 
+        2n-k-1}}(-1)^{s_1}(2n-s_1-2)! \prod_{r=1}\frac{(\frac{d\hat{\mathbb{T}}^{(\xi)}
+        \left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix} \bigg| t  
+        \right)}{dt})^{s_r}}{(r!)^{s_r}s_r!}
+\end{align}
+
+Then we apply (\ref{e}), so we get
+
+\begin{align}
+        \frac{d^n}{dx^n}\hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m 
+        \\ \Omega_m \end{matrix} \bigg| x  \right) &= (-1)^{n-1}\left( 
+        (\mathcal{T}(\bigotimes_{l=\iota}^\iota x_l |\psi)\ln(x_\iota) +
+        \sum_{k_1 + k_2 + ... + k_m = 1}\prod_{w=1}^m\frac{1}{k_w!} \right.
+        \\ &\left.\prod_{1 \leq t \leq m}(-\omega_t + \psi)^{(p_t - k_t)}(1+p_t-
+        k_t)_{k_t})\right)^{1-2n}\sum_{k=1}^n \sum \frac{(-1)^{\beta_1 + k}(\beta_1
+        -1)!}{\prod_{i=2}^k (\beta_i)!i!^{\beta_i}} \times\\ & \times \left(\prod_{\lambda 
+        = 1}^k (\ln(n_\lambda) \mathcal{T}(\bigotimes_{j=1}^\lambda n_j |\psi) + 
+        +\sum_{i=1}^m p_i \prod_{j=1}^m (\psi-\omega_j)^{p_i-\delta_{i, j}(1)} \right) 
+        \times \\ & \times \prod_{j=2}^k
+        \left(\mathcal{T}(\bigotimes_{m \geq t \geq 1}x_t| x) \ln^i (x_m) \right.
+        \left. \biigO_{\lambda = 1}^{m-1} \left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}
+        \ln^{u_{\lambda}}(x_{m-\lambda}) \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda
+        x_{m-q} |\psi)^{u_{\lambda}} \right] + \right.\\
+        &\left.+ i! \sum_{\sum_{j=1}^m k_j = i}\prod_{1 \leq t \leq m} \frac{(x - \omega_t)^{p_k v}
+        \Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}\right)^{\beta_i}
+        \frac{1}{(k-1)!} \times \\ & \times \sum_{\substack{s_1 + s_2 . ... = n-1 \\ 1\times s_1 
+        + 2 \times s_2 + ... = 2n-k-1}}(-1)^{s_1}(2n-s_1 -2)! \prod_{y = 1}\frac{1}{(y+1)!^{s_{y+1}}
+        s_{y+1}!} \times \\ & \times 
+        \left( \mathcal{T}(\bigotimes_{m \geq t \geq 1}x_t| x) \ln^y (x_m) \biigO_{\lambda = 1}^{m-1}
+        \left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}\ln^{u_{\lambda}}(x_{m-\lambda}) \mathcal{T}(
+        \bigotimes_{q = \lambda-1}^\lambda x_{m-q} |x)^{u_{\lambda}} \right] + 
+        \right. \\ & \left. + y! \sum_{\sum_{j=1}^m k_j = n}\prod_{1 \leq t \leq m} \frac{(\psi -
+        \omega_t)^{p_k v}\Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}
+        \right)^{s_y}
+\end{align}
+
+\begin{theorem}
+        Let us have a \(\hat{\mathbb{T}}\) function, then the following summation representation holds for \(x \in \Omega\).
+        
+        \begin{align}
+                \hat{\mathbb{T}}\left( \xi_k \begin{matrix} P_m \\ \Omega_m \end{matrix}
+                \bigg| x  \right) &= \sum_{n\geq 0}\frac{1}{n!}(x-a)^n(-1)^{n-1}\left( 
+                (\mathcal{T}(\bigotimes_{l=\iota}^\iota x_l |\psi)\ln(x_\iota) + \sum_{k_1 
+                + k_2 + ... + k_m = 1}\prod_{w=1}^m\frac{1}{k_w!} \right. \\ &\left.\prod_{1 
+                \leq t \leq m}(-\omega_t + \psi)^{(p_t - k_t)}(1+p_t-k_t)_{k_t})\right)^{1-2n}
+                \sum_{k=1}^n \sum \frac{(-1)^{\beta_1 + k}(\beta_1 -1)!}{\prod_{i=2}^k (\beta_i)!
+                i!^{\beta_i}} \times\\ & \times \left(\prod_{\lambda = 1}^k (\ln(n_\lambda) 
+                \mathcal{T}(\bigotimes_{j=1}^\lambda n_j |\psi) + 
+                +\sum_{i=1}^m p_i \prod_{j=1}^m (\psi-\omega_j)^{p_i-\delta_{i, j}(1)} \right) 
+                \times \\ & \times \prod_{j=2}^k
+                \left(\mathcal{T}(\bigotimes_{m \geq t \geq 1}x_t| a) \ln^i (x_m) \right.
+                \left. \biigO_{\lambda = 1}^{m-1} \left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}
+                \ln^{u_{\lambda}}(x_{m-\lambda}) \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda
+                x_{m-q} |\psi)^{u_{\lambda}} \right] + \right.\\
+                &\left.+ i! \sum_{\sum_{j=1}^m k_j = i}\prod_{1 \leq t \leq m} \frac{(\psi - 
+                \omega_t)^{p_k v}\Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}\right)^{\beta_i}
+                \frac{1}{(k-1)!} \times \\ & \times \sum_{\substack{s_1 + s_2 . ... = n-1 \\
+                1\times s_1 + 2 \times s_2 + ... = 2n-k-1}}(-1)^{s_1}(2n-s_1 -2)! \prod_{y = 1}
+                \frac{1}{(y+1)!^{s_{y+1}}s_{y+1}!} \times \\ & \times 
+                \left( \mathcal{T}(\bigotimes_{m \geq t \geq 1}x_t| \psi) \ln^y (x_m) \biigO_{\lambda 
+                = 1}^{m-1} \left[\sum_{u_{\lambda}=1}^{u_{\lambda-1}}\ln^{u_{\lambda}}(x_{m-\lambda}) 
+                \mathcal{T}(\bigotimes_{q = \lambda-1}^\lambda x_{m-q} |\psi)^{u_{\lambda}} \right] +
+                \right. \\ & \left. + y! \sum_{\sum_{j=1}^m k_j = n}\prod_{1 \leq t \leq m} \frac{(\psi 
+                - \omega_t)^{p_k v}\Gamma(1+p_t v)}{k_t\Gamma(1+p_t v - k_t)}
+                \right)^{s_y}
+        \end{align}
+        
+        Where \(\Omega\) is set inside convergence radius given by constant a.
+        
+\end{theorem}
